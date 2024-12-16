@@ -1,0 +1,130 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Estilos del footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 30px;
+}
+
+/* Contenedor principal */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Columnas del footer */
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #74ebd5;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #74ebd5;
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 20px;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #74ebd5;
+}
+
+/* Estilos para el formulario de suscripción al newsletter */
+.newsletter-input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+
+.newsletter-btn {
+    padding: 10px 20px;
+    background-color: #74ebd5;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.newsletter-btn:hover {
+    background-color: #acb6e5;
+}
+
+/* Estilos para la parte inferior del footer */
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.footer-bottom-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-bottom-links li {
+    font-size: 14px;
+}
+
+.footer-bottom-links a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.footer-bottom-links a:hover {
+    color: #74ebd5;
+}

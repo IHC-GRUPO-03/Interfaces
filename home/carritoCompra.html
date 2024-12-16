@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Papelería Acuarela</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/carrito.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Aquí se insertará el Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Contenedor del carrito -->
+    <section class="cart-container">
+        <h2>Tu Carrito de Compras</h2>
+
+        <!-- Productos en el carrito -->
+        <div class="cart-items">
+            <!-- Producto 1 -->
+            <div class="cart-item">
+                <img src="../img/cuaderno.webp" alt="Cuaderno">
+                <div class="cart-item-details">
+                    <h4>Cuaderno de Diseño Profesional</h4>
+                    <p>Color: Azul, Tamaño: A5</p>
+                </div>
+                <div class="cart-item-quantity">
+                    <button class="quantity-btn">-</button>
+                    <input type="number" value="1" min="1">
+                    <button class="quantity-btn">+</button>
+                </div>
+                <div class="cart-item-price">$19.99</div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="cart-item">
+                <img src="../img/boli-gel.webp" alt="Bolígrafo">
+                <div class="cart-item-details">
+                    <h4>Bolígrafo de Gel</h4>
+                    <p>Color: Negro, Pack: 3 unidades</p>
+                </div>
+                <div class="cart-item-quantity">
+                    <button class="quantity-btn">-</button>
+                    <input type="number" value="2" min="1">
+                    <button class="quantity-btn">+</button>
+                </div>
+                <div class="cart-item-price">$5.99</div>
+            </div>
+        </div>
+
+        <!-- Resumen del carrito -->
+        <div class="cart-summary">
+            <div class="cart-summary-text">
+                <h3>Total</h3>
+            </div>
+            <div class="cart-total">
+                $31.97
+            </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="cart-buttons">
+            <a href="../home/shop.html" class="cart-button">Seguir Comprando</a>
+            <a href="../home/procederPago.html" class="cart-button">Proceder al Pago</a>
+        </div>
+    </section>
+
+    <!-- Aquí se insertará el Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Cargar el Header y Footer con JavaScript -->
+    <script src="../js/compomente.js"></script>
+</body>
+</html>

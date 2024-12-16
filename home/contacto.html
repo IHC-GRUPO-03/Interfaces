@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Papelería Acuarela</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        /* Sección principal de contacto */
+        .contact-container {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        .contact-info div {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 25%;
+            text-align: center;
+        }
+
+        .contact-info i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #74ebd5;
+        }
+
+        /* Formulario de contacto */
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #74ebd5;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Aquí se insertará el Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Sección de Contacto -->
+    <section class="contact-container">
+        <h2>Contacto</h2>
+
+        <!-- Información de Contacto -->
+        <div class="contact-info">
+            <!-- Dirección -->
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Dirección</h3>
+                <p>Calle Ficticia 123, Ciudad, País</p>
+            </div>
+            <!-- Teléfono -->
+            <div>
+                <i class="fas fa-phone-alt"></i>
+                <h3>Teléfono</h3>
+                <p>(+123) 456 7890</p>
+            </div>
+            <!-- Email -->
+            <div>
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>contacto@papeleriaacuarela.com</p>
+            </div>
+        </div>
+
+        <!-- Formulario de Contacto -->
+        <div class="contact-form">
+            <h3>Envíanos un mensaje</h3>
+            <form action="#" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu email" required>
+
+                <label for="subject">Asunto:</label>
+                <input type="text" id="subject" name="subject" placeholder="Asunto de tu mensaje" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Aquí se insertará el Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Cargar el Header y Footer con JavaScript -->
+    <script>
+        // Cargar el Header
+        fetch("../compomentes/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data)
+            .catch(error => console.error('Error cargando el header:', error));
+
+        // Cargar el Footer
+        fetch('../compomentes/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+            .catch(error => console.error('Error cargando el footer:', error));
+    </script>
+
+
+    <!-- FontAwesome para los íconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

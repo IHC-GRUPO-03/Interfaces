@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelería Acuarela</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Sección Hero (Onboarding) */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('login-rgister/img/hero-bg.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            color: rgb(63, 45, 45);
+            text-align: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .hero-buttons a {
+            background-color: #74ebd5; /* Color para los botones */
+            padding: 12px 24px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .hero-buttons a:hover {
+            background-color: #acb6e5; /* Color cuando el botón es hover */
+        }
+
+        /* Paso a Paso */
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            padding: 50px 20px;
+        }
+
+        .step {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+        }
+
+        .step h3 {
+            font-size: 1.6rem;
+            color: #74ebd5; /* Color para los pasos */
+            margin-bottom: 15px;
+        }
+
+        .step p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Beneficios */
+        .benefits {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 80px;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 10px;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .benefit img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .benefit:hover img {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Aquí se insertará el Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Bienvenido a Papelería Acuarela</h1>
+            <img src="../img/LogoCColor.png" style="width: 125px; height: 100px;">
+            <p>Encuentra todo lo que necesitas para tu oficina, escuela y hogar. ¡Calidad y precios inigualables!</p>
+            <div class="hero-buttons">
+                <a href="onboarding.html">Comienza a Comprar</a>
+                <a href="home.html">Explora las Categorías</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paso a Paso -->
+    <section class="steps">
+        <div class="step">
+            <h3>Paso 1</h3>
+            <p>Explora nuestras categorías de productos: oficina, escuela, arte y más.</p>
+        </div>
+        <div class="step">
+            <h3>Paso 2</h3>
+            <p>Agrega tus productos favoritos al carrito de compras.</p>
+        </div>
+        <div class="step">
+            <h3>Paso 3</h3>
+            <p>Revisa tu carrito y finaliza la compra de manera rápida y segura.</p>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="benefits">
+        <div class="benefit">
+            <img src="../img/iconoEnvio.png"alt="Envío gratuito">
+            <p><strong>Envío gratuito</strong> en compras superiores a $50</p>
+        </div>
+        <div class="benefit">
+            <img src="../img/seguro.png" alt="Compra segura">
+            <p><strong>Compra segura</strong> con métodos de pago confiables</p>
+        </div>
+        <div class="benefit">
+            <img src="../img/devolucion.png" alt="Devoluciones fáciles">
+            <p><strong>Devoluciones fáciles</strong> en productos defectuosos</p>
+        </div>
+    </section>
+
+    <!-- Aquí se insertará el Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Cargar el Header y Footer con JavaScript -->
+    <script>
+        // Cargar el Header
+        fetch("../compomentes/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data)
+            .catch(error => console.error('Error cargando el header:', error));
+
+        // Cargar el Footer
+        fetch('../compomentes/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+            .catch(error => console.error('Error cargando el footer:', error));
+    </script>
+
+</body>
+
+</html>

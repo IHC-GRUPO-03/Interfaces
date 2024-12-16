@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - Papelería Acuarela</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+       
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+
+
+
+        /* Sección de Ofertas */
+        .offers-container {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .offers-container h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Filtros */
+        .filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+
+        .filter {
+            background-color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter select {
+            padding: 8px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        /* Contenedor de productos */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        /* Tarjeta de Producto */
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h4 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            font-size: 1.5rem;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-card .old-price {
+            font-size: 1.2rem;
+            text-decoration: line-through;
+            color: #777;
+        }
+
+        .product-card button {
+            background-color: #74ebd5;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-card button:hover {
+            background-color: #45a049;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Aquí se insertará el Header -->
+    <div id="header-placeholder"></div>
+
+
+    <section class="offers-container">
+        <h2>Ofertas Especiales</h2>
+
+        <!-- Filtros -->
+        <div class="filters">
+            <div class="filter">
+                <label for="category">Categoría</label><br>
+                <select id="category">
+                    <option value="all">Todas las categorías</option>
+                    <option value="notebooks">Cuadernos</option>
+                    <option value="pens">Bolígrafos</option>
+                    <option value="markers">Marcadores</option>
+                    <option value="paints">Pinturas</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="price">Rango de Precio</label><br>
+                <select id="price">
+                    <option value="all">Todos los precios</option>
+                    <option value="low">Menos de $10</option>
+                    <option value="mid">De $10 a $30</option>
+                    <option value="high">Más de $30</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Lista de productos en oferta -->
+        <div class="product-list">
+            <!-- Producto 1 -->
+            <div class="product-card" data-category="notebooks" data-price="low">
+                <img src="../img/notebook.webp" alt="Cuaderno en oferta">
+                <h4>Cuaderno Profesional</h4>
+                <p class="old-price">$20.00</p>
+                <p class="price">$12.99</p>
+                <button>Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card" data-category="pens" data-price="low">
+                <img src="../img/boli-gel.webp" alt="Bolígrafo en oferta">
+                <h4>Bolígrafo de Gel</h4>
+                <p class="old-price">$7.99</p>
+                <p class="price">$4.99</p>
+                <button>Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card" data-category="markers" data-price="mid">
+                <img src="../img/marcadores.webp" alt="Marcadores en oferta">
+                <h4>Marcadores de Colores</h4>
+                <p class="old-price">$10.50</p>
+                <p class="price">$6.99</p>
+                <button>Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="product-card" data-category="paints" data-price="mid">
+                <img src="../img/pintura.webp" alt="Pintura en oferta">
+                <h4>Pintura Acrílica</h4>
+                <p class="old-price">$15.00</p>
+                <p class="price">$9.99</p>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+    <!-- Aquí se insertará el Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Cargar el Header y Footer con JavaScript -->
+    <script src="../js/compomente.js"></script>
+
+    <script src="../js/oferta.js"></script>
+
+
+</body>
+</html>

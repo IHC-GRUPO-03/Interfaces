@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Papelería Acuarela</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Contenedor de la tienda */
+        .shop-container {
+            display: flex;
+            margin: 30px auto;
+            max-width: 1200px;
+            gap: 30px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Filtros de productos */
+        .filters {
+            width: 280px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 10px;
+        }
+
+        .filters h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .filter-item {
+            margin-bottom: 20px;
+        }
+
+        .filter-item label {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .filter-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Productos */
+        .product-list {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h4 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            font-size: 1.5rem;
+            color: #74ebd5;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product-card button {
+            background-color: #74ebd5;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-card button:hover {
+            background-color: #45a049;
+        }
+
+        /* Paginación */
+        .pagination {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .pagination a {
+            margin: 0 5px;
+            padding: 8px 15px;
+            background-color: #74ebd5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .pagination a:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo para la imagen del producto */
+        .cta-buttons a {
+            display: inline-block;
+            background-color: #74ebd5;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Aquí se insertará el Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Contenedor de la tienda -->
+    <section class="shop-container">
+        <!-- Filtros -->
+        <div class="filters">
+            <h3>Filtros</h3>
+            <!-- Filtro por categoría -->
+            <div class="filter-item">
+                <label for="category">Categoría</label><br>
+                <input type="checkbox" id="notebooks" name="category" value="notebooks"> Cuadernos<br>
+                <input type="checkbox" id="pens" name="category" value="pens"> Bolígrafo<br>
+                <input type="checkbox" id="markers" name="category" value="markers"> Marcadores<br>
+                <input type="checkbox" id="paints" name="category" value="paints"> Pinturas
+            </div>
+
+            <!-- Filtro por precio -->
+            <div class="filter-item">
+                <label for="price">Precio</label><br>
+                <input type="checkbox" id="low-price" name="price" value="low"> Menos de $10<br>
+                <input type="checkbox" id="mid-price" name="price" value="mid"> $10 - $30<br>
+                <input type="checkbox" id="high-price" name="price" value="high"> Más de $30
+            </div>
+        </div>
+
+        <!-- Productos -->
+        <div class="product-list" id="product-list">
+            <!-- Producto 1 -->
+            <div class="product-card" data-category="notebooks" data-price="mid">
+                <img src="../img/notebook.webp" alt="Cuaderno de Diseño Profesional">
+                <h4>Cuaderno de Diseño Profesional</h4>
+                <p class="price">$19.99</p>
+                <div class="cta-buttons">
+                    <a href="../home/productoPage.html">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card" data-category="pens" data-price="low">
+                <img src="../img/boli-gel.webp" alt="Bolígrafo de Gel">
+                <h4>Bolígrafo de Gel</h4>
+                <p class="price">$5.99</p>
+                <div class="cta-buttons">
+                    <a href="../home/productoPage.html">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card" data-category="notebooks" data-price="low">
+                <img src="../img/lapi-colors.webp" alt="Lápices de Colores">
+                <h4>Lápices de Colores</h4>
+                <p class="price">$8.49</p>
+                <div class="cta-buttons">
+                    <a href="../home/productoPage.html">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="product-card" data-category="paints" data-price="mid">
+                <img src="../img/estuche.webp" alt="Estuche de Pinturas">
+                <h4>Estuche de Pinturas</h4>
+                <p class="price">$12.99</p>
+                <div class="cta-buttons">
+                    <a href="../home/productoPage.html">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paginación -->
+    <section class="pagination">
+        <a href="../home/error.html">1</a>
+        <a href="../home/error.html">2</a>
+        <a href="../home/error.html">3</a>
+        <a href="../home/error.html">Siguiente</a>
+    </section>
+
+    <!-- Aquí se insertará el Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Cargar el Header y Footer con JavaScript -->
+    <script src="../js/shop.js"></script>
+    <script src="../js/compomente.js"></script>
+</body>
+
+</html>

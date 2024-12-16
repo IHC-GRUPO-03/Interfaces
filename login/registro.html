@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <title>Registro</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            background: white;
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            background: #74ebd5;
+            border: none;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #acb6e5;
+        }
+
+        .form-text a {
+            text-decoration: none;
+            color: #74ebd5;
+        }
+
+        .form-text a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2 class="h2-register">Crear Cuenta</h2>
+        <p>¡Bienvenido! Completa el formulario para crear tu cuenta.</p>
+
+        <!-- Mensaje dinámico de éxito o error -->
+        <div id="mensaje">
+            <!-- Ejemplo de mensaje de éxito -->
+            <!-- <div class='alert alert-success'>¡Registro exitoso!</div> -->
+            <!-- Ejemplo de mensaje de error -->
+            <!-- <div class='alert alert-danger'>Las contraseñas no coinciden.</div> -->
+        </div>
+
+        <form id="registerForm" method="post" action="">
+
+            <!-- Campo Nombre -->
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" name="nombre" required>
+                <label>Nombre de usuario</label>
+            </div>
+
+            <!-- Campo Email -->
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" name="email" required>
+                <label>Correo</label>
+            </div>
+
+            <!-- Campo Contraseña -->
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" id="password" name="password" required>
+                <label>Contraseña</label>
+            </div>
+
+            <!-- Campo Confirmar Contraseña -->
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                <label>Confirme Contraseña</label>
+            </div>
+
+            <!-- Aceptación de términos y condiciones -->
+            <div class="remember-forgot">
+                <label><input type="checkbox" name="terms" required> Acepto los términos y condiciones</label>
+            </div>
+
+            <!-- Mensaje de error -->
+            <div id="error-message" class="error-message">Las contraseñas no coinciden</div>
+
+            <!-- Botón de registro -->
+            <input name="btnregistrar" class="btn" type="submit" value="Registrate">
+
+            <!-- Enlace para iniciar sesión -->
+            <div class="login-register">
+                <p><small class="form-text"><a href="login.php">¿Ya tienes cuenta?</a></small> 
+                <a href="login.php" class="login-link">Iniciar sesión</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/validar_password.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Validación de que las contraseñas coinciden
+        document.getElementById("registerForm").onsubmit = function(event) {
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confirm_password").value;
+            if (password !== confirm_password) {
+                event.preventDefault(); // Evita el envío del formulario
+                document.getElementById("error-message").style.display = "block"; // Muestra el mensaje de error
+            } else {
+                document.getElementById("error-message").style.display = "none"; // Oculta el mensaje de error
+            }
+        }
+    </script>
+</body>
+
+</html>

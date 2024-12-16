@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <!-- Vinculamos el archivo de CSS -->
+    <link rel="stylesheet" href="../css/login.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+
+        .btn {
+            border-radius: 30px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .social-buttons button {
+            margin: 5px 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .btn-facebook {
+            background-color: #3b5998;
+            color: #fff;
+        }
+
+        .btn-facebook:hover {
+            background-color: #2d4373;
+        }
+
+        .btn-x {
+            background-color: #1da1f2;
+            color: #fff;
+        }
+
+        .btn-x:hover {
+            background-color: #0d95e8;
+        }
+
+        .form-text a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">Papelería Acuarelas</h2>
+        <!-- Mensaje de error o éxito -->
+        <div id="mensaje"></div>
+        <!-- Formulario de inicio de sesión -->
+        <form id="login-form">
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" name="password" required>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+                <small class="form-text"><a href="recuperarCuenta.html">Olvidé mi contraseña</a></small>
+                <small class="form-text"><a href="registro.html">Registrarse</a></small>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn">Iniciar sesión</button>
+            </div>
+        </form>
+
+        <!-- Botones de redes sociales -->
+        <div class="social-buttons mt-4 text-center">
+            <button class="btn btn-facebook">
+                <i class="fab fa-facebook-f"></i> Iniciar sesión con Facebook
+            </button>
+            <button class="btn btn-x">
+                <i class="fab fa-x"></i> Iniciar sesión con X
+            </button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para el inicio de sesión -->
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const mensaje = document.getElementById('mensaje');
+
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Simulamos una verificación de usuario (en una aplicación real, esto se haría con una API)
+            if (email === 'juan@example.com' && password === '123456') {
+                // Si el inicio de sesión es correcto
+                mensaje.innerHTML = '<div class="alert alert-success">¡Bienvenido, Juan!</div>';
+                localStorage.setItem('loggedIn', 'true'); // Guardamos el estado de sesión
+
+                // Redirigir a la página de inicio o dashboard
+                window.location.href = '../home/onboarding.html';
+            } else {
+                // Si las credenciales son incorrectas
+                mensaje.innerHTML = '<div class="alert alert-danger">Correo o contraseña incorrectos.</div>';
+                localStorage.setItem('loggedIn', 'false'); // Cambiamos el estado de sesión
+            }
+        });
+    </script>
+</body>
+
+</html>

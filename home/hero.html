@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelería Acuarela</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+    <!-- Aquí se insertará el Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Papelería Acuarela</h1>
+            <img src="../img/LogoCColor.png" style="width: 125px; height: 100px;">
+            <p>Encuentra todo lo que necesitas para tu oficina, escuela y hogar. ¡Calidad y precios inigualables!</p>
+            <div class="cta-buttons">
+                <a href="onboarding.html">Compra ahora</a>
+                <a href="home.html">Explora nuestros productos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios de la tienda -->
+    <section class="benefits">
+        <div class="benefit">
+            <img src="../img/iconoEnvio.png" alt="Envío gratuito">
+            <p><strong>Envío gratuito</strong> en compras superiores a $50</p>
+        </div>
+        <div class="benefit">
+            <img src="../img/seguro.png" alt="Compra segura">
+            <p><strong>Compra segura</strong> con métodos de pago confiables</p>
+        </div>
+        <div class="benefit">
+            <img src="../img/devolucion.png" alt="Devoluciones fáciles">
+            <p><strong>Devoluciones fáciles</strong> en productos defectuosos</p>
+        </div>
+    </section>
+
+    <!-- Aquí se insertará el Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Cargar el Header y Footer con JavaScript -->
+    <script>
+        // Cargar el Header
+        fetch("../compomentes/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data)
+            .catch(error => console.error('Error cargando el header:', error));
+
+        // Cargar el Footer
+        fetch('../compomentes/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+            .catch(error => console.error('Error cargando el footer:', error));
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

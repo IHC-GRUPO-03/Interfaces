@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error de Conexión - Papelería Acuarela</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contenedor principal de la interfaz */
+        .error-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Título */
+        .error-container h1 {
+            font-size: 2.5rem;
+            color: #f44336;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Mensaje de error */
+        .error-container p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        /* Estilo del icono */
+        .error-container .icon {
+            font-size: 5rem;
+            color: #f44336;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite;
+        }
+
+        /* Animación del icono (boteo) */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Botón de reintentar */
+        .retry-btn {
+            background-color: #74ebd5;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        .retry-btn:hover {
+            background-color: #45a049;
+        }
+
+        .retry-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Agregar un mensaje alternativo */
+        .error-container .extra-message {
+            font-size: 1rem;
+            color: #888;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Contenedor de la interfaz de error -->
+    <div class="error-container">
+        <div class="icon">
+            <i class="fas fa-wifi-slash"></i>
+        </div>
+        <h1>Error de Conexión</h1>
+        <p>No se pudo establecer una conexión con el servidor. Por favor, verifica tu conexión a internet e inténtalo de nuevo.</p>
+        <a href="#" class="retry-btn">Reintentar</a>
+        <div class="extra-message">
+            Si el problema persiste, por favor contacta con el soporte técnico.
+        </div>
+    </div>
+
+</body>
+
+</html>

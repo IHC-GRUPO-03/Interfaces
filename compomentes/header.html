@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Ecommerce</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#">
+                <img src="../img/LogoCColor.png" alt="Logo Ecommerce">
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="../home/hero.html">Inicio</a></li>
+                <li><a href="../home/home.html">Tienda</a></li>
+                <li><a href="../home/oferta.html">Ofertas</a></li>
+                <li><a href="../home/shop.html">Categorías</a></li>
+                <li><a href="../home/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos..." class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="cart">
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a>
+            </div>
+
+            <div class="user-auth">
+                <div class="user-logged-in" style="display: none;">
+                    <span class="welcome-message">Hola, Juan</span>
+                    <a href="#" class="logout-btn">Cerrar sesión</a>
+                </div>
+
+                <div class="user-logged-out" style="display: block;">
+                    <a href="../login/login.html" class="login-btn">Iniciar sesión</a>
+                    <a href="../login/registro.html" class="signup-btn">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const userLoggedInElement = document.querySelector('.user-logged-in');
+        const userLoggedOutElement = document.querySelector('.user-logged-out');
+
+        // Verificamos el estado de la sesión desde localStorage
+        if (localStorage.getItem('loggedIn') === 'true') {
+            userLoggedInElement.style.display = 'flex';
+            userLoggedOutElement.style.display = 'none';
+        } else {
+            userLoggedInElement.style.display = 'none';
+            userLoggedOutElement.style.display = 'flex';
+        }
+    </script>
+</body>
+
+</html>

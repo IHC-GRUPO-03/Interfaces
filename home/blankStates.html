@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado en Blanco - Papelería Acuarela</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #4CAF50; /* Verde papelería */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Sección Blank State */
+        .blank-state {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .blank-state-content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .blank-state img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 30px;
+        }
+
+        .blank-state h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .blank-state p {
+            font-size: 1.2rem;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .blank-state-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .blank-state-buttons a {
+            background-color: #4CAF50;
+            padding: 12px 24px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .blank-state-buttons a:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Papelería Acuarela</h1>
+    </header>
+
+    <!-- Blank State para carrito vacío -->
+    <section class="blank-state">
+        <div class="blank-state-content">
+            <img src="https://via.placeholder.com/150/ffcc00/ffffff?text=🛒" alt="Carrito vacío">
+            <h2>¡Tu carrito está vacío!</h2>
+            <p>Parece que aún no has agregado productos. Explora nuestra tienda y encuentra lo que necesitas para tu oficina, escuela o hogar.</p>
+            <div class="blank-state-buttons">
+                <a href="#">Ver productos</a>
+                <a href="#">Seguir comprando</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blank State para no hay productos en la categoría -->
+    <section class="blank-state">
+        <div class="blank-state-content">
+            <img src="https://via.placeholder.com/150/ffcc00/ffffff?text=📚" alt="Sin productos en la categoría">
+            <h2>No hay productos en esta categoría</h2>
+            <p>Parece que esta categoría aún no tiene productos. Vuelve más tarde o explora otras secciones de la tienda.</p>
+            <div class="blank-state-buttons">
+                <a href="#">Volver a la tienda</a>
+                <a href="#">Explorar otras categorías</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blank State para lista de deseos vacía -->
+    <section class="blank-state">
+        <div class="blank-state-content">
+            <img src="https://via.placeholder.com/150/ffcc00/ffffff?text=💖" alt="Lista de deseos vacía">
+            <h2>No tienes productos en tu lista de deseos</h2>
+            <p>Agrega productos a tu lista de deseos para guardarlos para más tarde. ¡Hazlo ahora y no pierdas de vista esos productos especiales!</p>
+            <div class="blank-state-buttons">
+                <a href="#">Explorar productos</a>
+                <a href="#">Ver recomendaciones</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Papelería Acuarela. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 100%;
+    max-width: 100px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group .form-control {
+    border-radius: 100px;
+}
+
+.form-text a {
+    text-decoration: none;
+    color: #74ebd5;
+}
+
+.form-text a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del botón de iniciar sesión */
+.btn {
+    background: #74ebd5;
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #acb6e5;
+}
+
+/* Estilos de los botones de redes sociales */
+.social-buttons {
+    margin-top: 2rem;
+}
+
+.social-buttons .btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.social-buttons .btn-facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.social-buttons .btn-facebook:hover {
+    background-color: #165eab;
+}
+
+.social-buttons .btn-x {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.social-buttons .btn-x:hover {
+    background-color: #0d8ccf;
+}
+
+/* Iconos */
+.social-buttons .fab {
+    margin-right: 10px;
+}

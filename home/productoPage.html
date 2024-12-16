@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto - Papelería Acuarela</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #74ebd5; /* Verde papelería */
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        /* Navegación */
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #45a049;
+        }
+
+        /* Contenedor de producto */
+        .product-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+            gap: 40px;
+            background-color: #fff;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        /* Imagen del producto */
+        .product-image img {
+            max-width: 500px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Detalles del producto */
+        .product-details {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .product-details h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .product-details p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .product-details .price {
+            font-size: 1.7rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .product-details .description {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .product-details .quantity {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .product-details .quantity label {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .product-details input[type="number"] {
+            width: 60px;
+            padding: 8px;
+            font-size: 1.1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product-details .add-to-cart-btn {
+            background-color: #74ebd5;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 1.3rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .product-details .add-to-cart-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Productos recomendados */
+        .recommended-products {
+            margin-top: 60px;
+            background-color: #f9f9f9;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .recommended-products h3 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .product-recommendations {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            width: 220px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h4 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            font-size: 1.4rem;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .product-card a {
+            color: #74ebd5;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .product-card a:hover {
+            color: #45a049;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="../css/estilos.css">
+        <!-- Aquí se insertará el Header -->
+        <div id="header-placeholder"></div>    
+
+    <section class="product-container">
+        <!-- Imagen del Producto -->
+        <div class="product-image">
+            <img src="../img/notebook.webp" alt="Imagen del producto">
+        </div>
+
+        <!-- Detalles del Producto -->
+        <div class="product-details">
+            <h2 id="product-title">Cuaderno de Diseño Profesional</h2>
+            <p class="price" id="product-price">$19.99</p>
+            <p class="description" id="product-description">
+                Este cuaderno está diseñado para artistas y profesionales que buscan un producto de alta calidad. Con páginas lisas y un diseño elegante, es ideal para escribir, dibujar y tomar notas.
+            </p>
+            
+            <!-- Selector de cantidad -->
+            <div class="quantity">
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1">
+            </div>
+
+            <!-- Botón de agregar al carrito -->
+            <div class="cta-buttons">
+                <a href="../home/carritoCompra.html">Agregar al carrito</a>
+            </div>
+             <div>
+    </section>
+
+    <!-- Productos Recomendados -->
+    <section class="recommended-products">
+        <h3>Productos Recomendados</h3>
+        <div class="product-recommendations">
+            <!-- Producto 1 -->
+            <div class="product-card" data-product="1">
+                <img src="../img/boli-gel.webp" alt="Bolígrafo de Gel">
+                <h4>Bolígrafo de Gel</h4>
+                <p class="price">$5.99</p>
+                <a href="#" class="view-product">Ver producto</a>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card" data-product="2">
+                <img src="../img/lapi-colors.webp" alt="Lápices de Colores">
+                <h4>Lápices de Colores</h4>
+                <p class="price">$8.49</p>
+                <a href="#" class="view-product">Ver producto</a>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card" data-product="3">
+                <img src="../img/estuche.webp" alt="Estuche de Pinturas">
+                <h4>Estuche de Pinturas</h4>
+                <p class="price">$12.99</p>
+                <a href="#" class="view-product">Ver producto</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- Aquí se insertará el Footer -->
+    <div id="footer-placeholder"></div>
+
+
+    <!-- Cargar el Header y Footer con JavaScript -->
+    <script src="../js/compomente.js"></script>
+
+    <script src="../js/oferta.js"></script>
+
+</body>
+</html>
